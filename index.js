@@ -254,5 +254,20 @@ return total/numbers.length;
 
 
 
+// max 
 
-
+function max(numbers) {
+  // we set `currentMax` to the value
+  // of first item in `numbers`,
+  // then we loop through `numbers`,
+  // comparing each item to `currentMax`.
+  // if the item is greater than `currentMax`,
+  // we set `currentMax` to that number.
+  var currentMax = numbers[0];
+  for (var i=0; i <= numbers.length; i++) {
+    if (numbers[i] > currentMax) {
+       currentMax = numbers[i];
+    }
+  }
+  return currentMax;
+}
