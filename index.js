@@ -237,16 +237,138 @@
 // }
 
 
-function average(numbers); {
+// function average(numbers); {
 
-var total = numbers[0]; // start with the first value
+// var total = numbers[0]; // start with the first value
 
-for (var i=1; i < numbers.length; i++) { // compare with every number and divide with the length to get the average
-  total+=numbers[i];
-}
+// for (var i=1; i < numbers.length; i++) { // compare with every number and divide with the length to get the average
+//   total+=numbers[i];
+// }
 
-return total/numbers.length;
-}
+// return total/numbers.length;
+// }
+
+// // max 
+
+// function max(numbers) {
+//   // we set `currentMax` to the value
+//   // of first item in `numbers`,
+//   // then we loop through `numbers`,
+//   // comparing each item to `currentMax`.
+//   // if the item is greater than `currentMax`,
+//   // we set `currentMax` to that number.
+//   var currentMax = numbers[0];
+//   for (var i=0; i < numbers.length; i++) {
+//     console.log('Index: ' + i +' ' + numbers[i]);
+//     if (numbers[i] > currentMax) {
+//        currentMax = numbers[i];
+//     }
+//   }
+//   return currentMax;
+// }
+
+
+// // var testArray = ['First Item', 'Second Item', 'Third Item']
+// // testArray.forEach(function(value, index) {
+// //   alert('I have '+value+' in my cart');
+// // });
+
+
+// // For (setup, comparison, change)
+
+
+
+// // noprotect
+// // ^^ `noprotect` is here to prevent a bug with jsbin and for loops.
+
+
+
+
+// function min(numbers) {
+//   // we set `currentMin` to the value
+//   // of first item in `numbers`,
+//   // then we loop through `numbers`,
+//   // comparing each item to `currentMin`.
+//   // if the item is less than `currentMin`,
+//   // we set `currentMin` to that number.
+//   var currentMin = numbers[0];
+//   for (var i=0; i <= numbers.length; i++) {
+//     if (numbers[i] < currentMin) {
+//        currentMin = numbers[i];
+//     }
+//   }
+//   return currentMin;
+// }
+
+
+
+
+// /* From here down, you are not expected to 
+//    understand.... for now :)  
+   
+   
+//    Nothing to see here!
+   
+// */
+
+
+// // tests
+
+// function testFunctionWorks(fn, input, expected) {
+//   if (fn(input) === expected) {
+//     console.log('SUCCESS: `' + fn.name + '` works on `[' + input + ']`');
+//     return true;
+//   }
+//   else {
+//     console.log(
+//       'FAILURE: `' + fn.name + '([' + input + '])` should be ' + expected +
+//       ' but was ' + fn(input)
+//     );
+//     return false;
+//   }
+// }
+
+
+// (function runTests() {
+//   // we'll use the variables in our test cases
+//   var numList1 = [-5, 28, 98, -20013, 0.7878, 22, 115];
+//   var realMin1 = numList1[3];
+//   var realMax1 = numList1[6];
+//   var numList2 = [0, 1, 2, 3, 4];
+//   var realMin2 = numList2[0];
+//   var realMax2 = numList2[4];
+  
+//   var testResults = [
+//     testFunctionWorks(max, numList1, realMax1),
+//     testFunctionWorks(max, numList2, realMax2),
+//     testFunctionWorks(min, numList1, realMin1),
+//     testFunctionWorks(min, numList2, realMin2),
+//   ];
+  
+//   var numPassing = testResults.filter(function(result){ return result; }).length;
+//   console.log(numPassing + ' out of ' + testResults.length + ' tests passing.');
+// })();
+
+
+// function max(numbers) {
+//   var maxNumber = numbers[0];
+//   for (var i=0; i <= numbers.length; i++) {
+//     if (numbers[i] > maxNumber) {
+//       maxNumber = numbers[i];
+//     }
+//     return maxNumber
+//   }
+// }
+
+//   var currentMax = numbers[0];
+//   for (var i=0; i < numbers.length; i++) {
+//     console.log('Index: ' + i +' ' + numbers[i]);
+//     if (numbers[i] > currentMax) {
+//        currentMax = numbers[i];
+//     }
+//   }
+//   return currentMax;
+// }
 
 
 
@@ -254,20 +376,79 @@ return total/numbers.length;
 
 
 
-// max 
 
-function max(numbers) {
-  // we set `currentMax` to the value
-  // of first item in `numbers`,
-  // then we loop through `numbers`,
-  // comparing each item to `currentMax`.
-  // if the item is greater than `currentMax`,
-  // we set `currentMax` to that number.
-  var currentMax = numbers[0];
-  for (var i=0; i <= numbers.length; i++) {
-    if (numbers[i] > currentMax) {
-       currentMax = numbers[i];
-    }
+
+// function average(numbers) {
+//   var total = numbers.reduce((total, score) => total + score) / numbers.length;
+//   return total
+// }
+
+
+// function average(numbers) {
+//   // initially we set total to the value of the 
+//   // first number.
+//   var total = numbers[0];
+//   // then we add each of the remaining numbers
+//   // to total.
+//   for (var i=1; i < numbers.length; i++) {
+//     total+= numbers[i];
+//   }
+//   // then we return total divided by the length
+//   // of our numbers array to get the average.
+//   return total/numbers.length;
+// }
+
+
+
+// function averageAlt(numbers) {
+//   return numbers.reduce(function(a, b) {return a + b;})/numbers.length;
+// }
+
+
+
+for (var i = 1; i <= 100; i++) {
+  
+  if ( (i % 3 == 0) && (i % 5 ==0) ) {
+    console.log("FizzBuzz");
   }
-  return currentMax;
+
+  else if ( i % 3 == 0 ) {
+    console.log("Fizz");
+  }
+
+  else if ( i % 5 == 0) {
+    console.log("Buzz");
+  }
+  
+   else {
+    console.log(i);
+  }
+
 }
+
+const output = fizzBuzz(false);
+console.log(output);
+
+function fizzBuzz(input) {
+  if (typeof input !== 'number')
+  return NaN;
+
+  if ((input % 3 === 0) && (input % 5 === 0))
+  return 'FizzBuzz';
+  
+  if (input % 3 === 0)
+  return 'Fizz';
+
+  if (input % 5 === 0)
+  return 'Buzz';
+
+ 
+
+  return input;
+  
+}
+
+
+const euros = [29.76, 41.85, 46.5];
+const sum = euros.reduce((total, amount) => total + amount); 
+sum // 118.11
