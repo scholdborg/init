@@ -370,20 +370,6 @@
 //   return currentMax;
 // }
 
-
-
-
-
-
-
-
-
-// function average(numbers) {
-//   var total = numbers.reduce((total, score) => total + score) / numbers.length;
-//   return total
-// }
-
-
 // function average(numbers) {
 //   // initially we set total to the value of the 
 //   // first number.
@@ -398,33 +384,50 @@
 //   return total/numbers.length;
 // }
 
-
-
 // function averageAlt(numbers) {
 //   return numbers.reduce(function(a, b) {return a + b;})/numbers.length;
 // }
 
 
+for(i=0;i<100;)console.log((++i%3?'':'fizz')+(i%5?'':'buzz')||i)
 
-for (var i = 1; i <= 100; i++) {
-  
+
+
+
+function fizzBuzz(countTo) {
+  var result = [];
+for (var i = 1; i <= countTo; i++) {
+  5252
   if ( (i % 3 == 0) && (i % 5 ==0) ) {
-    console.log("FizzBuzz");
+    result.push("fizzbuzz");
   }
 
   else if ( i % 3 == 0 ) {
-    console.log("Fizz");
+    result.push("fizz");
   }
 
   else if ( i % 5 == 0) {
-    console.log("Buzz");
+    result.push("buzz");
   }
   
    else {
-    console.log(i);
+    result.push(i);
   }
 
 }
+
+return result;
+}
+
+
+
+
+
+
+
+
+
+
 
 const output = fizzBuzz(false);
 console.log(output);
