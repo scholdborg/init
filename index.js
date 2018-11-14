@@ -393,34 +393,37 @@ for(i=0;i<100;)console.log((++i%3?'':'fizz')+(i%5?'':'buzz')||i)
 
 
 
-
 function fizzBuzz(countTo) {
+ 
   var result = [];
-for (var i = 1; i <= countTo; i++) {
-  5252
-  if ( (i % 3 == 0) && (i % 5 ==0) ) {
-    result.push("fizzbuzz");
-  }
 
-  else if ( i % 3 == 0 ) {
-    result.push("fizz");
+  for (var i=1; i <= countTo; i++) {
+    if ((i % 3 == 0) && (i % 5 ==0)) {
+      result.push('fizzbuzz'); 
+    }
+    else if (i % 5 === 0) {
+      result.push('buzz');
+    }
+    else if (i % 3 === 0) {
+      result.push('fizz');
+    }
+    else {
+      result.push(i);
+    }
   }
-
-  else if ( i % 5 == 0) {
-    result.push("buzz");
-  }
-  
-   else {
-    result.push(i);
-  }
-
-}
-
-return result;
+  return result;
 }
 
 
+array =[[10, 3, 5, 22, 19]
 
+function greatestToLeast(array) {
+  return array.sort(function(a, b) {
+    return b - a;
+  });
+
+    
+    }
 
 
 
